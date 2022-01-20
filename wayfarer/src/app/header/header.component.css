@@ -1,1 +1,10 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+}
+
+span {
+    display: inline;
+}
