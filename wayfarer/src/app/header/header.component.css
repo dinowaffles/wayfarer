@@ -1,1 +1,12 @@
 @import '~bootstrap/dist/css/bootstrap.min.css';
+
+
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+}
+
+#sitesearch {
+    width: 250px !important;
+}
