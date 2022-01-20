@@ -5,6 +5,8 @@
     flex-direction: row;
 }
 
-span {
-    display: inline;
+#sitesearch {
+    width: 250px !important;
+    position: relative;
+    right: 0;
 }
