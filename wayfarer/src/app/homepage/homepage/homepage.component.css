@@ -2,12 +2,19 @@
 
 .whole-page {
     display: grid;
-    grid-template-columns: 2;
+    grid-template-columns: 1fr 3fr;
     font-family: 'Inconsolata', monospace;
 }
 
 .sidebar {
     grid-column: 1;
+    padding-left: 20px;
+    padding-top: 30px;
+    font-size: 30px; 
+}
+
+a {
+    padding-top: 30px;
 }
 
 .city-detail {
@@ -20,16 +27,13 @@
 }
 
 img {
-    width: 200px;
+    width: 300px;
+    padding-left: 50px;
 }
 
 .city-header{
-
-  font-size: 50px;
-  height: 400px;
-  align-items: center;
-
-
+  font-size: 100px;
+  padding-top: 30px;
 }
 .city-name{
   align-items: center;

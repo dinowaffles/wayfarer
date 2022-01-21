@@ -2,14 +2,14 @@
     <div class="sidebar">
         <div *ngFor="let city of cities; index as i">
             <!-- <p>{{cities[i].name}}</p><br> -->
-            <a routerLink="/cities/{{cities[i].id}}">{{cities[i].name}}</a><br>
+            <a class="sidebar-link" routerLink="/cities/{{cities[i].id}}">{{cities[i].name}}</a><br>
         </div>
     </div>
 
     <div class="city-detail">
             <span class="city-header">
+                <span class="city-name">{{city.name | uppercase}}</span>
                 <img src={{city.photo}} >
-                <span class="city-name">{{city.name}}</span>
             </span>
 
             <div class="posts">
