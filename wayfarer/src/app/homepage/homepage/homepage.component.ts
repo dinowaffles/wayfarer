@@ -16,6 +16,10 @@ export class HomepageComponent implements OnInit {
   name: string|null = '';
   city: any;
 
+  postsIndex: string|null = '';
+  title: string|null = '';
+  posts: any;
+
   isShown: boolean = false; 
 
   constructor(private route: ActivatedRoute) { }
@@ -31,6 +35,18 @@ export class HomepageComponent implements OnInit {
 
     this.route.queryParams.subscribe(params => {
       this.name = params['name'];
+    });
+
+    this.route.paramMap.subscribe(params => {
+      this.postsIndex = params.get('id');
+      this.posts = CITIES.find(posts => {
+        let paramId: string = params.get('id') || '';
+        return posts.id === parseInt(paramId);
+      });
+    });
+
+    this.route.queryParams.subscribe(params => {
+      this.title = params['title'];
     });
   }
 
