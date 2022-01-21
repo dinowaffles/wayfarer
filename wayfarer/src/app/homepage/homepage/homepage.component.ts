@@ -16,9 +16,7 @@ export class HomepageComponent implements OnInit {
   name: string|null = '';
   city: any;
 
-  constructor(
-    private route: ActivatedRoute,
-    ) { }
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
@@ -31,7 +29,6 @@ export class HomepageComponent implements OnInit {
 
     this.route.queryParams.subscribe(params => {
       this.name = params['name'];
-    })
+    });
   }
-
 }

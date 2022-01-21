@@ -10,6 +10,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SidebarComponent } from './../app/homepage/sidebar/sidebar.component';
 import { CityDetailsComponent } from './../app/homepage/city-details/city-details.component';
 import { HomepageComponent } from './homepage/homepage/homepage.component';
+import { PostsComponent } from './homepage/posts/posts.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { HomepageComponent } from './homepage/homepage/homepage.component';
     LandingPageComponent,
     SidebarComponent,
     CityDetailsComponent,
-    HomepageComponent
+    HomepageComponent,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
