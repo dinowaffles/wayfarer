@@ -1,0 +1,29 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
+.nav-container {
+    display: flex;
+    flex-direction: row;
+    font-family: 'Inconsolata', monospace;
+    padding-left: 12px;
+}
+
+#sitesearch {
+    width: 250px !important;
+    position: relative;
+    right: 0;
+}
+
+#brand{
+    font-size: 48px;
+}
+
+.hero-img {
+    background-image: url("./../assets/images/southwest.jpeg");
+    background-size: cover;
+    opacity: 50%;
+    height: 100vh;
+}
+
+
+
