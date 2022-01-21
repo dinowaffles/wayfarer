@@ -11,7 +11,6 @@
 
 .sidebar {
     grid-column: 1;
-    grid-row: 1;
     margin-top: 100px;
     font-size: 30px;
     padding: 20px;
@@ -29,7 +28,7 @@ a {
 }
 
 .city-header{
-    font-size: 100px;
+    
 
 }
 
@@ -38,6 +37,7 @@ a {
     grid-row: 1;
     margin-bottom: 500px;
     margin-left: 150px;
+    font-size: 100px;
 }
 
 img {
@@ -52,6 +52,7 @@ img {
 
 .posts {
     grid-row: 2;
+    grid-column: 2 / span 2;
     margin-bottom: 100px;
     padding-bottom: 20px;
 }
