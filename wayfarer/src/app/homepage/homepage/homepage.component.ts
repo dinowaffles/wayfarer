@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
@@ -16,7 +17,7 @@ export class HomepageComponent implements OnInit {
   name: string|null = '';
   city: any;
 
-  isShown: boolean = false; 
+  isShown: boolean = false;
 
   constructor(private route: ActivatedRoute) { }
 
