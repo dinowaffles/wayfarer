@@ -42,7 +42,9 @@
       </nav>
   </div>
   
-  <div class="hero-img"></div>
+<div *ngIf="router.url==='/'">
+    <div class="hero-img"></div>
+</div>
 
 
 <!-- <app-header></app-header> -->
