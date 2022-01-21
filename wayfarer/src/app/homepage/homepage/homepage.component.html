@@ -14,8 +14,18 @@
             </span>
 
             <div class="posts">
-                <app-posts></app-posts>
-                <!-- <p>{{city.posts}}</p> -->
+                <!-- <app-posts></app-posts> -->
+                <p routerLink="/cities/1/posts/1">{{cities[0].posts[0].title}}</p>
+                <p>{{cities[0].posts[0].date}}</p>
+
+                <button (click)="toggleShow()" type="checkbox" >Show More</button>
+
+                <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
+                    <p>{{cities[0].posts[0].author}}</p>
+                    <p>{{cities[0].posts[0].text}}</p>
+                </div>
             </div>
     </div>
 </div>
+
+<router-outlet></router-outlet>

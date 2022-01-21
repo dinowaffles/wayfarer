@@ -7,12 +7,6 @@ const routes: Routes = [
   {
     path: 'cities/:id',
     component: HomepageComponent,
-    children: [
-      {
-        path: 'cities/:id/posts/:id',
-        component: PostsComponent
-      }
-    ]
   }
 ];
 

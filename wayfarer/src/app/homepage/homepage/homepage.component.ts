@@ -16,6 +16,8 @@ export class HomepageComponent implements OnInit {
   name: string|null = '';
   city: any;
 
+  isShown: boolean = false; 
+
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
@@ -30,5 +32,9 @@ export class HomepageComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.name = params['name'];
     });
+  }
+
+  toggleShow() {
+    this.isShown = ! this.isShown;
   }
 }
