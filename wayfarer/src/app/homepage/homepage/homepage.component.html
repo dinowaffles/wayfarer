@@ -1,17 +1,17 @@
 <div class="whole-page">
-  <div class="sidebar">
-      <div *ngFor="let city of cities; index as i">
-          <p>{{cities[i].name}}</p><br>
-      </div>
-  </div>
+    <div class="sidebar">
+        <div *ngFor="let city of cities; index as i">
+            <p>{{cities[i].name}}</p><br>
+        </div>
+    </div>
 
-  <div class="city-detail" >
-          <div>{{City.photo}}</div>
-          <p>{{city.name}}</p>
-          <div class="posts">
-              <p>I'm some posts</p>
-          </div>
-  </div>
+    <div class="city-detail" *ngIf="router.url==='/cities/{{city.id}}'" >
+            <div>{{city.photo}}</div>
+            <p>{{city.name}}</p>
+            <div class="posts">
+                <p>I'm some posts</p>
+            </div>
+    </div>
 
 
 </div>
