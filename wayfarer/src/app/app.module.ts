@@ -5,9 +5,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+
+
 import { SidebarComponent } from './../app/homepage/sidebar/sidebar.component';
 import { CityDetailsComponent } from './../app/homepage/city-details/city-details.component';
 import { HomepageComponent } from './homepage/homepage/homepage.component';
+
 
 @NgModule({
   declarations: [
