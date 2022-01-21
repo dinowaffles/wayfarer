@@ -7,6 +7,7 @@ import { HeaderComponent } from './header/header.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { SidebarComponent } from './../app/homepage/sidebar/sidebar.component';
 import { CityDetailsComponent } from './../app/homepage/city-details/city-details.component';
+import { HomepageComponent } from './../app/homepage/homepage/homepage.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CityDetailsComponent } from './../app/homepage/city-details/city-detail
     HeaderComponent,
     LandingPageComponent,
     SidebarComponent,
-    CityDetailsComponent
+    CityDetailsComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
