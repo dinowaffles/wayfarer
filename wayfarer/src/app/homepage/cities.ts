@@ -2,7 +2,7 @@ export const CITIES = [
     {
         id: 1,
         name: 'Chicago',
-        photo: 'assets/images/chicago-skyline.jpeg',
+        photo: '../assets/images/skyline-chicago.jpeg',
         posts: [{
             title: 'chicago post1',
             date: '01-20-2022',
