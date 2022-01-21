@@ -6,10 +6,20 @@
       </div>
   </div>
 
-  <div class="city-detail">
-          <span class="city-header">
-              <span class="city-name">{{city.name | uppercase}}</span> </span>
-              <img src={{city.photo}} >
+
+    <div class="city-detail">
+            <span class="city-header">
+                <span class="city-name">{{city.name | uppercase}}</span>
+                <img src={{city.photo}} >
+            </span>
+
+            <div class="posts">
+                <app-posts></app-posts>
+                <!-- <p>{{city.posts}}</p> -->
+            </div>
+    </div>
+</div>
+
 
 
           <div class="posts">
