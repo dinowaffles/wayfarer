@@ -20,22 +20,31 @@ a {
 .city-detail {
     grid-column: 2;
     grid-template-rows: 2;
+    grid-template-columns: 2;
+}
+
+.city-header{
+    font-size: 100px;
+    padding-top: 30px;
+    grid-row: 1;
+}
+
+.city-name{
+    grid-column: 1;
+    align-self: center;
+}
+
+img {
+    grid-column: 2;
+    width: 300px;
+    padding-left: 50px;
 }
 
 .posts {
     grid-row: 2;
 }
 
-img {
-    width: 300px;
-    padding-left: 50px;
-}
 
-.city-header{
-  font-size: 100px;
-  padding-top: 30px;
-}
-.city-name{
-  align-items: center;
-  padding-bottom: 20px;
-}
+
+
+

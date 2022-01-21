@@ -9,7 +9,12 @@ import { CityDetailsComponent } from './homepage/city-details/city-details.compo
 const routes: Routes = [
   {
     path: 'cities/:id',
-    component: HomepageComponent
+    component: HomepageComponent,
+    children: [
+      {
+        path: 'cities/:id/:id',
+      }
+    ]
   }
 ];
 
