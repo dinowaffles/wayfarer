@@ -9,4 +9,9 @@
 
 .city-detail {
     grid-column: 2;
+    grid-template-rows: 2;
+}
+
+.posts {
+    grid-row: 2;
 }
