@@ -3,6 +3,7 @@
 .whole-page {
     display: grid;
     grid-template-columns: 2;
+    grid-template-rows: 4;
     font-family: 'Inconsolata', monospace;
 }
 
@@ -12,15 +13,19 @@
 
 .city-detail {
     grid-column: 2;
-    grid-template-rows: 2;
+
+    display:flex;
+    align-items: right;
+    justify-content: right;
 }
 
 .posts {
-    grid-row: 2;
+    grid-row: 4;
 }
 
 img {
-    width: 200px;
+    width: 300px;
+
 }
 
 .city-header{
