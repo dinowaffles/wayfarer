@@ -15,3 +15,7 @@
 .posts {
     grid-row: 2;
 }
+
+img {
+    width: 200px;
+}

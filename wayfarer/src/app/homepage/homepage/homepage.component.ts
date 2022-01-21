@@ -17,7 +17,7 @@ export class HomepageComponent implements OnInit {
   city: any;
 
   constructor(
-    private route: ActivatedRoute,public router: Router
+    private route: ActivatedRoute,
     ) { }
 
   ngOnInit(): void {
