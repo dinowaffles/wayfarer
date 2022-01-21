@@ -12,7 +12,7 @@ const routes: Routes = [
     component: LandingPageComponent
   },
   {
-    path: 'cities/:id',
+    path: '/cities/:id',
     component: HomepageComponent
   }
 
