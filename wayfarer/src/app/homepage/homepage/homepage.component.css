@@ -1,0 +1,12 @@
+.whole-page {
+    display: grid;
+    grid-template-columns: 2;
+}
+
+.sidebar {
+    grid-column: 1;
+}
+
+.city-detail {
+    grid-column: 2;
+}

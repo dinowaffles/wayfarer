@@ -1,10 +1,15 @@
-<div class="sidebar">
-    <p>I'm a sidebar</p>
+<div class="whole-page">
+    <div class="sidebar">
+        <div *ngFor="let city of cities; index as i">
+            <p>{{cities[i].name}}</p><br>
+        </div>
+    </div>
+    
+    <div class="city-detail">
+        <p>I'm some details</p>
+    </div>
 </div>
 
-<div class="city-detail">
-    <p>I'm some details</p>
-</div>
 
 
 <!-- <app-city-details></app-city-details>

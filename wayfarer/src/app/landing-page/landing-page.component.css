@@ -6,10 +6,3 @@ div {
     height: 100vh;
 }
 
-p {
-    font-family: 'Inconsolata', monospace;
-    font-size: 72px;
-    padding-left: 600px;
-    padding-top: 20px;
-    color: #8f836d;
-}
