@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
+
 .whole-page {
     display: grid;
     grid-template-columns: 2;
+    font-family: 'Inconsolata', monospace;
 }
 
 .sidebar {

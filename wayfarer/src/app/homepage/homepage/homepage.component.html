@@ -1,7 +1,8 @@
 <div class="whole-page">
     <div class="sidebar">
         <div *ngFor="let city of cities; index as i">
-            <p>{{cities[i].name}}</p><br>
+            <!-- <p>{{cities[i].name}}</p><br> -->
+            <a routerLink="/cities/{{cities[i].id}}">{{cities[i].name}}</a><br>
         </div>
     </div>
 
