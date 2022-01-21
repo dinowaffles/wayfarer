@@ -5,11 +5,12 @@
         </div>
     </div>
     
-    <div class="city-detail">
-        <p>I'm some details</p>
-        <div class="posts">
-            <p>I'm some posts</p>
-        </div>
+    <div class="city-detail" *ngIf="router.url==='/cities/{{city.id}}'" >
+            <div>{{city.photo}}</div>
+            <p>{{city.name}}</p>
+            <div class="posts">
+                <p>I'm some posts</p>
+            </div>
     </div>
 
 
