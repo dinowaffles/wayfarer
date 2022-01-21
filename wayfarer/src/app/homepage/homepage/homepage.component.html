@@ -13,14 +13,16 @@
                 <img src={{city.photo}} >
             </span>
 
-            <div class="posts">
-                <p>{{cities[0].posts[0].title}}</p>
-                <p>{{cities[0].posts[0].date}}</p>
+            <div class="posts" *ngFor="let post of city.posts; index as i">
+                <!-- <app-posts></app-posts> -->
+                <p >{{city.posts[i].title}}</p>
+                <p>{{city.posts[i].date}}</p>
+
 
                 <button (click)="toggleShow()" type="checkbox" >Show More</button>
                 <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
-                    <p>{{cities[0].posts[0].author}}</p>
-                    <p>{{cities[0].posts[0].text}}</p>
+                    <p>{{city.posts[i].author}}</p>
+                    <p>{{city.posts[i].text}}</p>
                 </div>
             </div>
     </div>

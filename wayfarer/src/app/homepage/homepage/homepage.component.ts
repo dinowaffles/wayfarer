@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
@@ -21,6 +22,7 @@ export class HomepageComponent implements OnInit {
   posts: any;
 
   isShown: boolean = false; 
+
 
   constructor(private route: ActivatedRoute) { }
 
