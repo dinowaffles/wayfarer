@@ -30,9 +30,5 @@ export class HomepageComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.name = params['name'];
     });
-
-
-
   }
-
 }

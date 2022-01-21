@@ -1,1 +1,7 @@
-<p>posts works!</p>
+<div *ngFor="let city of cities; index as i">
+    <div routerLink="/cities/{{cities[i].id}}">
+        <div *ngFor="let posts of posts; index as i">
+            <a class="posts-link" routerLink="/posts/{{posts[i].id}}">{{posts[i].title}}</a><br>
+        <div>
+    <div>
+</div>
