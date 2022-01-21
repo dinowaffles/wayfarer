@@ -1,10 +1,11 @@
 <div class="whole-page">
-    <div class="sidebar">
-        <div *ngFor="let city of cities; index as i">
-            <!-- <p>{{cities[i].name}}</p><br> -->
-            <a class="sidebar-link" routerLink="/cities/{{cities[i].id}}">{{cities[i].name}}</a><br>
-        </div>
-    </div>
+  <div class="sidebar">
+      <div *ngFor="let city of cities; index as i">
+          <!-- <p>{{cities[i].name}}</p><br> -->
+          <a class="sidebar-link" routerLink="/cities/{{cities[i].id}}">{{cities[i].name}}</a><br>
+      </div>
+  </div>
+
 
     <div class="city-detail">
             <span class="city-header">
@@ -21,5 +22,9 @@
 
 
 
-<!-- <app-city-details></app-city-details>
-<app-sidebar></app-sidebar> -->
+          <div class="posts">
+              <app-posts></app-posts>
+              <!-- <p>{{city.posts}}</p> -->
+          </div>
+  </div>
+</div>
