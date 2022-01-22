@@ -22,29 +22,24 @@
 }
 
 .city-detail {
-
-
-
-}
-
-.city-header{
-    
-
+    grid-row: 1 / span 2;
+    grid-column: 2;
 }
 
 .city-name{
     grid-column: 2;
     grid-row: 1;
-    margin-bottom: 500px;
-    margin-left: 150px;
-    font-size: 100px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    font-size: 80px;
 }
 
 img {
-    grid-column: 3;
+    grid-column: 2;
+    grid-row: 2;
     width: 500px;
-    margin-left: 700px;
-   margin-bottom: 100px;
+    margin-left: 30px;
+    margin-bottom: 30px;
 
 
 
@@ -53,10 +48,29 @@ img {
 .posts {
     grid-row: 2;
     grid-column: 2 / span 2;
-    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
     padding-bottom: 20px;
 }
 
+.post-title, .post-date, .post-author, .post-text {
+    padding-right: 20px;
+}
+
+.post-author {
+    padding-left: 30px; 
+}
+
+.post-text {
+    flex-wrap: wrap;
+}
+
+.post-info {
+    display: flex;
+    flex-direction: row;
+}
 
 
 

@@ -13,17 +13,23 @@
                 <img src={{city.photo}} >
             </span>
 
-            <div class="posts" *ngFor="let post of city.posts; index as i">
-                <!-- <app-posts></app-posts> -->
-                <p >{{city.posts[i].title}}</p>
-                <p>{{city.posts[i].date}}</p>
-
-
-                <button (click)="toggleShow()" type="checkbox" >Show More</button>
-                <div *ngIf="isShown" class="row container-fluid"  id="divshow" >
-                    <p>{{city.posts[i].author}}</p>
-                    <p>{{city.posts[i].text}}</p>
+            <div class="posts-container">
+                <div class="posts" *ngFor="let post of city.posts; index as i">
+                    <p class="post-title">{{city.posts[i].title}}</p>
+                    <p class="post-date">{{city.posts[i].date}}</p>
+    
+    
+                    <button (click)="toggleShow()" type="checkbox" >Show More</button>
+                    <div *ngIf="isShown" class="post-info"  id="divshow" >
+                        <p class="post-author">{{city.posts[i].author}}</p>
+                        <p class="post-text">{{city.posts[i].text}}</p>
+                    </div>
                 </div>
             </div>
+            
+    </div>
+
+    <div class="weather-container">
+        <p>here's some weather</p>
     </div>
 </div>

@@ -8,6 +8,10 @@
     padding-left: 12px;
 }
 
+li {
+    padding-right: 20px; 
+}
+
 #sitesearch {
     width: 250px !important;
     position: relative;
@@ -19,7 +23,7 @@
 }
 
 .search-results {
-    padding-left: 350px; 
+    padding-left: 400px; 
     font-family: 'Inconsolata', monospace;
 }
 
