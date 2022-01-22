@@ -19,7 +19,7 @@
 }
 
 .search-results {
-    padding-left: 480px; 
+    padding-left: 350px; 
     font-family: 'Inconsolata', monospace;
 }
 
@@ -32,7 +32,7 @@
 .hero-img {
     background-image: url("./../assets/images/southwest.jpeg");
     background-size: cover;
-    opacity: 75%;
+    opacity: 80%;
     height: 100vh;
 }
 

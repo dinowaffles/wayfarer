@@ -12,7 +12,7 @@
               <a class="nav-link" id="home-link" routerLink="/">Home</a>
             </li>
   
-            <li class="nav-item active">
+            <!-- <li class="nav-item active">
                 <a class="nav-link" routerLink="/cities/{{cities[0].id}}">{{cities[0].name}}</a>
               </li>
   
@@ -22,16 +22,18 @@
   
               <li class="nav-item active">
                 <a class="nav-link" routerLink="/cities/{{cities[2].id}}">{{cities[2].name}}</a>
-              </li>
+              </li> -->
   
-            <!-- <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" routerLink="/cities/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <li ngbDropdown class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle aria-haspopup="true" aria-expanded="false">
                 Cities
               </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown" *ngFor="let city of cities">
-                <a class="dropdown-item" routerLink="/cities/{{city.id}}">{{city.name}}</a>
+              <div ngbDropdownMenu="cities" class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <div *ngFor="let city of cities"> 
+                  <a ngbDropdownItem class="dropdown-item" routerLink="/cities/{{city.id}}">{{city.name}}</a>
+                </div>
               </div>
-            </li> -->
+            </li>
   
           </ul>
           <div class="form-group input-group">
