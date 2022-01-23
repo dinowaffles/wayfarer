@@ -28,7 +28,7 @@ export class HomepageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.route.paramMap.subscribe(params => {
       this.cityIndex = params.get('id');
       this.city = CITIES.find(city => {
@@ -47,14 +47,14 @@ export class HomepageComponent implements OnInit {
         let paramId: string = params.get('id') || '';
         return posts.id === parseInt(paramId);
       });
-      this.posts.sort((a:any, b:any) => new Date(a.date).getTime() - new Date(b.date).getTime())
+      
     });
 
     this.route.queryParams.subscribe(params => {
       this.title = params['title'];
     });
 
-
+    this.city.posts = this.city.posts.sort((a:any, b:any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
   }
     
