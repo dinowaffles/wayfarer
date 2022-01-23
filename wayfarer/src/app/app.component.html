@@ -37,7 +37,7 @@
   
           </ul>
           <div class="form-group input-group">
-                <input type="text" class="form-control input-sm" placeholder="Search" id="sitesearch" name="search" [(ngModel)]="search" (keyup)="showResults()">
+                <input type="text" class="form-control input-sm" placeholder="Search" id="sitesearch" autocomplete="off" name="search" [(ngModel)]="search" (keyup)="showResults()">
                 <span class="input-group-addon"><button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="showResults()"><span class="glyphicon glyphicon-search">Search</span></button></span><br>
           </div>
         </div>

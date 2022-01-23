@@ -52,7 +52,7 @@ export const CITIES = [
         },
         {
             id: 2, 
-            title: 'lincoln post2',
+            title: 'london post2',
             date: '01-21-2022',
             author: 'Abby',
             text: 'lorem ipsem'

@@ -1,7 +1,9 @@
 
+import { DATE_PIPE_DEFAULT_TIMEZONE } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { sortAndDeduplicateDiagnostics } from 'typescript';
 import { CITIES } from '../cities';
 
 @Component({
@@ -26,7 +28,7 @@ export class HomepageComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.route.paramMap.subscribe(params => {
       this.cityIndex = params.get('id');
       this.city = CITIES.find(city => {
@@ -45,13 +47,18 @@ export class HomepageComponent implements OnInit {
         let paramId: string = params.get('id') || '';
         return posts.id === parseInt(paramId);
       });
+      this.posts.sort((a:any, b:any) => new Date(a.date).getTime() - new Date(b.date).getTime())
     });
 
     this.route.queryParams.subscribe(params => {
       this.title = params['title'];
     });
-  }
 
+
+
+  }
+    
+  
   toggleShow() {
     this.isShown = ! this.isShown;
   }

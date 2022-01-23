@@ -15,6 +15,7 @@ import { HomepageComponent } from './homepage/homepage/homepage.component';
 import { PostsComponent } from './homepage/posts/posts.component';
 import { SearchPipe } from './search.pipe';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { DateSortPipe } from './date-sort.pipe';
 
 
 @NgModule({
@@ -26,7 +27,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     CityDetailsComponent,
     HomepageComponent,
     PostsComponent,
-    SearchPipe
+    SearchPipe,
+    DateSortPipe
   ],
   imports: [
     BrowserModule,
