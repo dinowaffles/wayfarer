@@ -1,6 +1,7 @@
 
 import { DATE_PIPE_DEFAULT_TIMEZONE } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
 import { sortAndDeduplicateDiagnostics } from 'typescript';
@@ -28,7 +29,12 @@ export class HomepageComponent implements OnInit {
   author: string = '';
   date: string = '';
   posttitle: string = '';
-  text: string = '';
+  posttext: string = '';
+
+  userPost = new FormGroup({
+    postTitle: new FormControl('', [Validators.minLength(1), Validators.maxLength(200)]),
+    postText: new FormControl('', [Validators.required])
+  })
 
 
   constructor(private route: ActivatedRoute) { }
@@ -70,5 +76,13 @@ export class HomepageComponent implements OnInit {
 
   postSubmit() {
     console.log(this.author);
+  }
+
+  get postTitle () {
+    return this.userPost.get('postTitle');
+  }
+
+  get postText() {
+    return this.userPost.get('text');
   }
 }

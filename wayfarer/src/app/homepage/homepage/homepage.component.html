@@ -36,17 +36,38 @@
     </div>
 
     <div class="user-post">
-        <p>wanna make a post??</p>
-        <input type="text" id="author" name="author" [(ngModel)]="author" placeholder="User Name"><br>
-        <input type="text" id="date" name="date" [(ngModel)]="date" placeholder="Date"><br>
-        <input type="text" id="posttitle" name="posttitle" [(ngModel)]="posttitle" placeholder="Title"><br>
-        <input type="text" id="date" name="text" [(ngModel)]="text" placeholder="Post Content"><br>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="postSubmit()"><span class="glyphicon glyphicon-submit">Submit</span></button>
+        <p>Do you want to make a post?</p>
+        <form [formGroup]="userPost">
+            <label for="username">Enter your username:
+                <input type="text" id="author" name="author" [(ngModel)]="author" placeholder="User Name"><br>
+            </label>
+
+            <label for="date">Enter today's date:
+                <input type="text" id="date" name="date" [(ngModel)]="date" placeholder="Date"><br>
+            </label>
+            
+            <label for="postitle">Enter a title for your post: 
+                <input type="text" id="posttitle" name="posttitle" 
+                    [(ngModel)]="posttitle" maxlength="200" minlength="1" 
+                    formControlName="posttitle" placeholder="Title"><br>
+                    <div *ngIf="userPost.get('postTitle')?.hasError('maxlength')">Title must be less than 200 characters.</div>
+                    <div *ngIf="userPost.get('postTitle')?.hasError('minlength')">Title must be longer than 1 character.</div>
+            </label>
+            
+            <label for="text">What do you have to share?
+                <textarea type="text" id="date" name="posttext" formControlName="posttitle" [(ngModel)]="posttext" placeholder="Post Content"></textarea><br>
+                <div *ngIf="userPost.get('postText')?.hasError('required')">Post content is required.</div>
+            </label>
+
+
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="postSubmit()"><span class="glyphicon glyphicon-submit">Submit</span></button>
+        </form>
+        
 
         <p>{{author}}</p>
         <p>{{date}}</p>
         <p>{{posttitle}}</p>
-        <p>{{text}}</p>
+        <p>{{posttext}}</p>
 
     </div>
 </div>
