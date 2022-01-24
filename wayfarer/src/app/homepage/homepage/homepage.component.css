@@ -66,7 +66,7 @@ img {
     padding-top: 50px;
 }
 
-.posts {
+.posts, .user-posts {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -75,19 +75,20 @@ img {
     font-size: 20px;
 }
 
-.post-title, .post-date, .post-author, .post-text {
+.post-title, .post-date, .post-author, .post-text, 
+.user-post-title, .user-post-date, .user-post-author, .user-post-text {
     padding-right: 20px;
 }
 
-.post-author {
+.post-author, .user-post-author {
     padding-left: 30px;
 }
 
-.post-text {
+.post-text, .user-post-text {
     flex-wrap: wrap;
 }
 
-.post-info {
+.post-info, .user-post-info {
     display: flex;
     flex-direction: row;
 }

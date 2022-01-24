@@ -28,8 +28,18 @@ export class HomepageComponent implements OnInit {
 
   author: string = '';
   date: string = '';
+  postcity: string = '';
   posttitle: string = '';
-  posttext: string = '';
+  text: string = '';
+
+  userPosts = [
+    {
+      usertitle: 'test',
+      userdate: 'test', 
+      userauthor: 'test', 
+      usertext: 'test', 
+    },
+  ]
 
   weather: any = '';
   locationSubject = new Subject;
@@ -84,7 +94,7 @@ export class HomepageComponent implements OnInit {
   }
 
   postSubmit() {
-    console.log(this.author);
-    // this.cities.push(this.posts.push(this.author, this.date, this.posttitle, this.posttext))
+    this.userPosts.push({usertitle: 'this.title', userdate: 'this.date', userauthor: 'this.author', usertext: 'this.text' })
+    console.log(this.userPosts);
   }
 }

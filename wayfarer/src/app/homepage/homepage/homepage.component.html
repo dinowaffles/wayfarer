@@ -26,8 +26,22 @@
                         <p class="post-author">{{city.posts[i].author}}</p>
                         <p class="post-text">{{city.posts[i].text}}</p>
                     </div>
-                </div>
             </div>
+
+            <div class="user-posts" *ngFor="let post of userPosts; index as i">
+                <p class="user-post-title">{{this.title}}</p>
+                <p class="user-post-date">{{this.date}}</p>
+
+
+                <button class="posts-btn" (click)="toggleShow()" type="checkbox" >Show More</button>
+                <div *ngIf="isShown" class="user-post-info"  id="divshow" >
+                    <p class="user-post-author">{{this.author}}</p>
+                    <p class="user-post-text">{{this.text}}</p>
+                </div>
+        </div>
+
+        
+        </div>
 
     </div>
 
@@ -109,15 +123,17 @@
 
         <input type="text" id="author" name="author" [(ngModel)]="author" placeholder="User Name"><br>
         <input type="text" id="date" name="date" [(ngModel)]="date" placeholder="Date"><br>
-        <input type="text" id="posttitle" name="posttitle" [(ngModel)]="posttitle" placeholder="Title"><br>
-        <input type="text" id="date" name="posttext" [(ngModel)]="posttext" placeholder="Post Content"><br>
+        <!-- <input type="text" id="postcity" name="postcity" [(ngModel)]="postcity" placeholder="City"><br> -->
+        <input type="text" id="title" name="title" [(ngModel)]="title" placeholder="Title"><br>
+        <input type="text" id="text" name="text" [(ngModel)]="text" placeholder="Post Content"><br>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="postSubmit()"><span class="glyphicon glyphicon-submit">Submit</span></button>
         
 
         <p>{{author}}</p>
         <p>{{date}}</p>
-        <p>{{posttitle}}</p>
-        <p>{{posttext}}</p>
+        <!-- <p>{{postcity}}</p> -->
+        <p>{{title}}</p>
+        <p>{{text}}</p>
 
     </div>
 </div>
