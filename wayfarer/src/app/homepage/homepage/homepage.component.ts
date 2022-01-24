@@ -25,6 +25,11 @@ export class HomepageComponent implements OnInit {
 
   isShown: boolean = false; 
 
+  author: string = '';
+  date: string = '';
+  posttitle: string = '';
+  text: string = '';
+
 
   constructor(private route: ActivatedRoute) { }
 
@@ -61,5 +66,9 @@ export class HomepageComponent implements OnInit {
   
   toggleShow() {
     this.isShown = ! this.isShown;
+  }
+
+  postSubmit() {
+    console.log(this.author);
   }
 }

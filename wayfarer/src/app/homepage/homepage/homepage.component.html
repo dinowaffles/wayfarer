@@ -37,11 +37,17 @@
 
     <div class="user-post">
         <p>wanna make a post??</p>
-        <input type="text" placeholder="User Name"><br>
-        <input type="text" placeholder="Date"><br>
-        <input type="text" placeholder="Title"><br>
-        <input type="text" placeholder="Post Content"><br>
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"><span class="glyphicon glyphicon-submit">Submit</span></button>
+        <input type="text" id="author" name="author" [(ngModel)]="author" placeholder="User Name"><br>
+        <input type="text" id="date" name="date" [(ngModel)]="date" placeholder="Date"><br>
+        <input type="text" id="posttitle" name="posttitle" [(ngModel)]="posttitle" placeholder="Title"><br>
+        <input type="text" id="date" name="text" [(ngModel)]="text" placeholder="Post Content"><br>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="postSubmit()"><span class="glyphicon glyphicon-submit">Submit</span></button>
+
+        <p>{{author}}</p>
+        <p>{{date}}</p>
+        <p>{{posttitle}}</p>
+        <p>{{text}}</p>
+
     </div>
 </div>
 
