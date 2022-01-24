@@ -37,7 +37,7 @@
 
     <div class="user-post">
         <p>Do you want to make a post?</p>
-        <form [formGroup]="userPost">
+        <!-- <form [formGroup]="userPost">
             <label for="username">Enter your username:
                 <input type="text" id="author" name="author" [(ngModel)]="author" placeholder="User Name"><br>
             </label>
@@ -47,21 +47,68 @@
             </label>
             
             <label for="postitle">Enter a title for your post: 
+                <span class="text-danger" *ngIf="userPost.get('postTitle')?.errors && userPost.get('postTitle')?.hasError('required')">*</span>
+
                 <input type="text" id="posttitle" name="posttitle" 
                     [(ngModel)]="posttitle" maxlength="200" minlength="1" 
-                    formControlName="posttitle" placeholder="Title"><br>
+                    formControlName="posttitle" class="form-control" 
+                    [class.valid]="userPost.get('postTitle')?.valid && 
+                    (userPost.get('postTitle')?.dirty || userPost.get('postTitle')?.touched)"
+                    [class.invalid]="userPost.get('toDo')?.invalid && 
+                    (userPost.get('postTitle')?.dirty || userPost.get('postTitle')?.touched)"
+                    placeholder="Title"><br>
+
+                    <div *ngIf="userPost.get('postTitle')?.invalid && userPost.get('postTitle')?.errors && 
+                            (userPost.get('postTitle')?.dirty || userPost.get('postTitle')?.touched)">
+                        <small class="text-danger"
+                            *ngIf="userPost.get('postTitle')?.hasError('required')">
+                            This field is required.
+                        </small>
+                        <small class="text-danger"
+                            *ngIf="userPost.get('postTitle')?.hasError('minlength')">
+                            The minimum length for this field is 1 characters.
+                        </small>
+                        <small class="text-danger"
+                            *ngIf="userPost.get('postTitle')?.hasError('maxlength')">
+                            The maximum length for this field is 200 characters.
+                        </small>
+                    </div>
+
                     <div *ngIf="userPost.get('postTitle')?.hasError('maxlength')">Title must be less than 200 characters.</div>
                     <div *ngIf="userPost.get('postTitle')?.hasError('minlength')">Title must be longer than 1 character.</div>
             </label>
             
             <label for="text">What do you have to share?
-                <textarea type="text" id="date" name="posttext" formControlName="posttitle" [(ngModel)]="posttext" placeholder="Post Content"></textarea><br>
+                <span class="text-danger" *ngIf="userPost.get('postText')?.errors && userPost.get('postTest')?.hasError('required')">*</span>
+
+                <textarea type="text" id="date" name="posttext" 
+                class="form-control" formControlName="postext" 
+                [class.valid]="userPost.get('postTest')?.valid && 
+                (userPost.get('postTest')?.dirty || userPost.get('postTest')?.touched)"
+                [class.invalid]="userPost.get('toDo')?.invalid && 
+                (userPost.get('postTest')?.dirty || userPost.get('postTest')?.touched)"
+                [(ngModel)]="posttext" placeholder="Post Content"></textarea><br>
+
+                <div *ngIf="userPost.get('postText')?.invalid && userPost.get('postText')?.errors && 
+                (userPost.get('postText')?.dirty || userPost.get('postText')?.touched)">
+                     <small class="text-danger"
+                        *ngIf="userPost.get('postText')?.hasError('required')">
+                        This field is required.
+                    </small>
+                </div>
+                
                 <div *ngIf="userPost.get('postText')?.hasError('required')">Post content is required.</div>
-            </label>
+            </label><br>
 
 
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="postSubmit()"><span class="glyphicon glyphicon-submit">Submit</span></button>
-        </form>
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="postSubmit()" [disabled]="userPost.invalid"><span class="glyphicon glyphicon-submit">Submit</span></button>
+        </form> -->
+
+        <input type="text" id="author" name="author" [(ngModel)]="author" placeholder="User Name"><br>
+        <input type="text" id="date" name="date" [(ngModel)]="date" placeholder="Date"><br>
+        <input type="text" id="posttitle" name="posttitle" [(ngModel)]="posttitle" placeholder="Title"><br>
+        <input type="text" id="date" name="posttext" [(ngModel)]="posttext" placeholder="Post Content"><br>
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="postSubmit()"><span class="glyphicon glyphicon-submit">Submit</span></button>
         
 
         <p>{{author}}</p>

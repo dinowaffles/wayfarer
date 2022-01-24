@@ -31,10 +31,10 @@ export class HomepageComponent implements OnInit {
   posttitle: string = '';
   posttext: string = '';
 
-  userPost = new FormGroup({
-    postTitle: new FormControl('', [Validators.minLength(1), Validators.maxLength(200)]),
-    postText: new FormControl('', [Validators.required])
-  })
+  // userPost = new FormGroup({
+  //   postTitle: new FormControl('', [Validators.minLength(1), Validators.maxLength(200)]),
+  //   postText: new FormControl('', [Validators.required])
+  // })
 
 
   constructor(private route: ActivatedRoute) { }
@@ -78,11 +78,11 @@ export class HomepageComponent implements OnInit {
     console.log(this.author);
   }
 
-  get postTitle () {
-    return this.userPost.get('postTitle');
-  }
+  // get postTitle () {
+  //   return this.userPost.get('postTitle');
+  // }
 
-  get postText() {
-    return this.userPost.get('text');
-  }
+  // get postText() {
+  //   return this.userPost.get('text');
+  // }
 }
