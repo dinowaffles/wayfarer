@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import { sortAndDeduplicateDiagnostics } from 'typescript';
 import { CITIES } from '../cities';
 import { HttpClient } from '@angular//common/http';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-homepage',
@@ -30,7 +31,8 @@ export class HomepageComponent implements OnInit {
   posttitle: string = '';
   posttext: string = '';
 
-  weather: any;
+  weather: any = '';
+  locationSubject = new Subject;
 
 
   constructor(private route: ActivatedRoute, private http: HttpClient) { }
@@ -64,11 +66,14 @@ export class HomepageComponent implements OnInit {
     this.city.posts = this.city.posts.sort((a:any, b:any) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
 
-    this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.city.name}&appid=052f26926ae9784c2d677ca7bc5dec98&&units=imperial`)
-    .subscribe((response) => {
-      console.log(response);
-      this.weather = response;
-    });
+    // this.locationSubject.subscribe(name => {
+      this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.city.name}&appid=052f26926ae9784c2d677ca7bc5dec98&&units=imperial`)
+      .subscribe((response) => {
+        console.log(response);
+        this.weather = response;
+      });
+    // })
+
       
 
   }
@@ -80,5 +85,6 @@ export class HomepageComponent implements OnInit {
 
   postSubmit() {
     console.log(this.author);
+    // this.cities.push(this.posts.push(this.author, this.date, this.posttitle, this.posttext))
   }
 }

@@ -35,7 +35,7 @@ li {
 }
 
 .hero-img {
-    background-image: url("./../assets/images/southwest.jpeg");
+    background: url("./../assets/images/southwest.jpeg") center center fixed;
     background-size: cover;
     opacity: 80%;
     height: 100vh;

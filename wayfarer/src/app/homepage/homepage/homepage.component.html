@@ -31,7 +31,7 @@
 
     </div>
 
-    <div class="weather-container">
+    <div *ngIf="weather" class="weather-container">
         <div>Today's Weather </div>
         <div>It is currently: {{weather.weather[0].description}}</div>
         <div>High temp: {{weather.main.temp_max}}</div>
