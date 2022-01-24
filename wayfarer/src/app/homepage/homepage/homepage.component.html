@@ -21,7 +21,7 @@
                     <p class="post-date">{{city.posts[i].date}}</p>
 
 
-                    <button (click)="toggleShow()" type="checkbox" >Show More</button>
+                    <button class="posts-btn" (click)="toggleShow()" type="checkbox" >Show More</button>
                     <div *ngIf="isShown" class="post-info"  id="divshow" >
                         <p class="post-author">{{city.posts[i].author}}</p>
                         <p class="post-text">{{city.posts[i].text}}</p>
