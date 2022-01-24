@@ -32,7 +32,10 @@
     </div>
 
     <div class="weather-container">
-        <p>here's some weather</p>
+        <div>Today's Weather </div>
+        <div>It is currently: {{weather.weather[0].description}}</div>
+        <div>High temp: {{weather.main.temp_max}}</div>
+        <div>Low temp: {{weather.main.temp_min}}</div>
     </div>
 
     <div class="user-post">
