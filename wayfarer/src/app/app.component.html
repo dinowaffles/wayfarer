@@ -5,36 +5,36 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-  
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item active">
               <a class="nav-link" id="home-link" routerLink="/">Home</a>
             </li>
-  
+
             <!-- <li class="nav-item active">
                 <a class="nav-link" routerLink="/cities/{{cities[0].id}}">{{cities[0].name}}</a>
               </li>
-  
+
               <li class="nav-item active">
                 <a class="nav-link" routerLink="/cities/{{cities[1].id}}">{{cities[1].name}}</a>
               </li>
-  
+
               <li class="nav-item active">
                 <a class="nav-link" routerLink="/cities/{{cities[2].id}}">{{cities[2].name}}</a>
               </li> -->
-  
+
             <li ngbDropdown class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" ngbDropdownToggle aria-haspopup="true" aria-expanded="false">
                 Cities
               </a>
               <div ngbDropdownMenu="cities" class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <div *ngFor="let city of cities"> 
+                <div *ngFor="let city of cities">
                   <a ngbDropdownItem class="dropdown-item" routerLink="/cities/{{city.id}}">{{city.name}}</a>
                 </div>
               </div>
             </li>
-  
+
           </ul>
           <div class="form-group input-group">
                 <input type="text" class="form-control input-sm" placeholder="Search" id="sitesearch" autocomplete="off" name="search" [(ngModel)]="search" (keyup)="showResults()">
@@ -49,7 +49,7 @@
       <a class="search-link" routerLink="/cities/{{data.id}}">{{data.name}}</a><br>
     </div>
   </div>
-  
+
 <div *ngIf="router.url==='/'">
     <div class="hero-img"></div>
 </div>

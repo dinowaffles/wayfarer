@@ -2,14 +2,16 @@
   <div class="sidebar">
       <div *ngFor="let city of cities; index as i">
           <!-- <p>{{cities[i].name}}</p><br> -->
-          <a class="sidebar-link" routerLink="/cities/{{cities[i].id}}">{{cities[i].name}}</a><br>
+         <a  type = "button" class="sidebar-link"  routerLink="/cities/{{city.id}}">{{city.name}}
+         </a><br>
+
+        </div>
       </div>
-  </div>
 
 
     <div class="city-detail">
-            <span class="city-header">
-                <span class="city-name">{{city.name | uppercase}}</span>
+            <span class="city-header" >
+                <span class="city-name" >{{city.name | uppercase}}</span>
                 <img src={{city.photo}} >
             </span>
 
@@ -17,8 +19,8 @@
                 <div class="posts" *ngFor="let post of city.posts; index as i">
                     <p class="post-title">{{city.posts[i].title}}</p>
                     <p class="post-date">{{city.posts[i].date}}</p>
-    
-    
+
+
                     <button (click)="toggleShow()" type="checkbox" >Show More</button>
                     <div *ngIf="isShown" class="post-info"  id="divshow" >
                         <p class="post-author">{{city.posts[i].author}}</p>
@@ -26,10 +28,11 @@
                     </div>
                 </div>
             </div>
-            
+
     </div>
 
     <div class="weather-container">
         <p>here's some weather</p>
     </div>
 </div>
+
