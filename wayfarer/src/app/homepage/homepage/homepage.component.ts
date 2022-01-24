@@ -1,7 +1,9 @@
 
+import { DATE_PIPE_DEFAULT_TIMEZONE } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Router } from '@angular/router';
+import { sortAndDeduplicateDiagnostics } from 'typescript';
 import { CITIES } from '../cities';
 
 @Component({
@@ -17,7 +19,12 @@ export class HomepageComponent implements OnInit {
   name: string|null = '';
   city: any;
 
-  isShown: boolean = false;
+  postsIndex: string|null = '';
+  title: string|null = '';
+  posts: any;
+
+  isShown: boolean = false; 
+
 
   constructor(private route: ActivatedRoute) { }
 
@@ -33,8 +40,25 @@ export class HomepageComponent implements OnInit {
     this.route.queryParams.subscribe(params => {
       this.name = params['name'];
     });
-  }
 
+    this.route.paramMap.subscribe(params => {
+      this.postsIndex = params.get('id');
+      this.posts = CITIES.find(posts => {
+        let paramId: string = params.get('id') || '';
+        return posts.id === parseInt(paramId);
+      });
+      
+    });
+
+    this.route.queryParams.subscribe(params => {
+      this.title = params['title'];
+    });
+
+    this.city.posts = this.city.posts.sort((a:any, b:any) => new Date(b.date).getTime() - new Date(a.date).getTime());
+
+  }
+    
+  
   toggleShow() {
     this.isShown = ! this.isShown;
   }

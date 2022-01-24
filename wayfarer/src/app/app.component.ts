@@ -12,10 +12,23 @@ import { Router } from '@angular/router';
 
 export class AppComponent implements OnInit {
 
-  constructor(public router: Router) {}
-
-  ngOnInit() {}
-
   title = 'wayfarer';
   cities = CITIES;
+
+  public search: any = '';
+
+  isShown: boolean = false; 
+
+  constructor(public router: Router) {}
+
+  ngOnInit() {
+
+
+  }
+
+  showResults() {
+    this.isShown = ! this.isShown;
+  }
+
+
 }
