@@ -77,7 +77,7 @@ export class HomepageComponent implements OnInit {
 
 
     // this.locationSubject.subscribe(name => {
-      this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.city.name}&appid=052f26926ae9784c2d677ca7bc5dec98&&units=imperial`)
+      this.http.get(`http://api.openweathermap.org/data/2.5/weather?q=${this.city.name}&appid=8935027cdf20f978dce1257d340e6d10&units=imperial`)
       .subscribe((response) => {
         console.log(response);
         this.weather = response;
