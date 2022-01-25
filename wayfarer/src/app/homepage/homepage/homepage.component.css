@@ -126,6 +126,10 @@ img {
     padding-left: 100px;
 }
 
+.user-post-header, .weather-header {
+    font-size: 20px;
+}
+
 
 
 

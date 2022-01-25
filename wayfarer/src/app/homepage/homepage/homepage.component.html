@@ -46,14 +46,14 @@
     </div>
 
     <div *ngIf="weather" class="weather-container">
-        <div>Today's Weather </div>
+        <div class="weather-header">☀️ Today's Weather 🌧</div>
         <div>It is currently: {{weather.weather[0].description}}</div>
-        <div>High temp: {{weather.main.temp_max}}</div>
-        <div>Low temp: {{weather.main.temp_min}}</div>
+        <div>High temp: {{weather.main.temp_max}}° F</div>
+        <div>Low temp: {{weather.main.temp_min}}° F</div>
     </div>
 
     <div class="user-post">
-        <p>Do you want to make a post?</p>
+        <p class="user-post-header">Do you want to make a post?</p>
         <!-- <form [formGroup]="userPost">
             <label for="username">Enter your username:
                 <input type="text" id="author" name="author" [(ngModel)]="author" placeholder="User Name"><br>
@@ -125,15 +125,9 @@
         <input type="text" id="date" name="date" [(ngModel)]="date" placeholder="Date"><br>
         <!-- <input type="text" id="postcity" name="postcity" [(ngModel)]="postcity" placeholder="City"><br> -->
         <input type="text" id="title" name="title" [(ngModel)]="title" placeholder="Title"><br>
-        <input type="text" id="text" name="text" [(ngModel)]="text" placeholder="Post Content"><br>
+        <textarea type="text" id="text" name="text" [(ngModel)]="text" placeholder="Post Content"></textarea><br>
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="postSubmit()"><span class="glyphicon glyphicon-submit">Submit</span></button>
-        
-
-        <p>{{author}}</p>
-        <p>{{date}}</p>
-        <!-- <p>{{postcity}}</p> -->
-        <p>{{title}}</p>
-        <p>{{text}}</p>
+    
 
     </div>
 </div>

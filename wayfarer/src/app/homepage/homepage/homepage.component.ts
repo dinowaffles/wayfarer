@@ -34,10 +34,10 @@ export class HomepageComponent implements OnInit {
 
   userPosts = [
     {
-      usertitle: 'test',
-      userdate: 'test', 
-      userauthor: 'test', 
-      usertext: 'test', 
+      // usertitle: 'test',
+      // userdate: 'test', 
+      // userauthor: 'test', 
+      // usertext: 'test', 
     },
   ]
 
